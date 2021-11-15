@@ -31,7 +31,7 @@ SystemdServiceBackend::SystemdServiceBackend(Service *service) :
 
 int SystemdServiceBackend::runService(int &argc, char **argv, int flags)
 {
-	qInstallMessageHandler(SystemdServiceBackend::systemdMessageHandler);
+    // qInstallMessageHandler(SystemdServiceBackend::systemdMessageHandler);
 	QCoreApplication app{argc, argv, flags};
 
 	QCommandLineParser parser;

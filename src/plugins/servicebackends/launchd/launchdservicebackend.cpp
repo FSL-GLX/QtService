@@ -15,7 +15,7 @@ LaunchdServiceBackend::LaunchdServiceBackend(Service *service) :
 
 int LaunchdServiceBackend::runService(int &argc, char **argv, int flags)
 {
-	qInstallMessageHandler(LaunchdServiceBackend::syslogMessageHandler);
+    // qInstallMessageHandler(LaunchdServiceBackend::syslogMessageHandler);
 	QCoreApplication app(argc, argv, flags);
 	if (!preStartService())
 		return EXIT_FAILURE;

@@ -45,7 +45,7 @@ int TerminalClient::exec(int &argc, char **argv, int flags)
 									  "%{if-category}%{category}: %{endif}"
 									  "%{message}"));
 #endif
-	qInstallMessageHandler(TerminalClient::cerrMessageHandler);
+    // qInstallMessageHandler(TerminalClient::cerrMessageHandler);
 
 	QCoreApplication app{argc, argv, flags};
 

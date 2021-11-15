@@ -73,7 +73,7 @@ int WindowsServiceBackend::runService(int &argc, char **argv, int flags)
 	Q_UNUSED(argc)
 	Q_UNUSED(argv)
 	xPath = QFileInfo{QString::fromUtf8(argv[0])}.dir().absolutePath();
-	qInstallMessageHandler(WindowsServiceBackend::winsvcMessageHandler);
+    // qInstallMessageHandler(WindowsServiceBackend::winsvcMessageHandler);
 
 	// if not set: get the app name from it's basename
 	Q_ASSERT_X(!QCoreApplication::applicationName().isEmpty(), Q_FUNC_INFO, "QCoreApplication::applicationName must be set before starting a windows service!");
